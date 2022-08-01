@@ -18,20 +18,29 @@ function RenderCanvas(numberOfBoxes)
 
     let gridSize = numberOfBoxes * numberOfBoxes;
 
+    let container = document.querySelector(".grid-container");
+
     for (let i = 1; i <= gridSize; i++)
     {
         //create div
         let box = document.createElement("div");
         box.setAttribute("class", "box");
-        //box.innerText = `${i}`;
+
+        let calculateSize = `${100 / numberOfBoxes}%`;
+        box.style.width = calculateSize;
+        box.style.height = calculateSize;
+
+        
 
         //Register event listener.
         box.addEventListener("mouseover", ColourIt);
 
         //attach to container
-        let container = document.querySelector(".grid-container");
         container.appendChild(box);
     }
+
+    //ADJUST GRID TEMPLATE COLS
+    container.style.gridTemplateColumns = `repeat(${numberOfBoxes}, 1fr)`;
 }
 
 //This will colour the box when hovering over.
@@ -59,7 +68,7 @@ function SetGridSize(event)
     }
 
     currentGridSize = size;
-    
+
     UpdateGridSizeLabel();
     RenderCanvas(currentGridSize);
 }
