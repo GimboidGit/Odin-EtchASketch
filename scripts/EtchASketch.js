@@ -93,5 +93,5 @@ function ResetCanvas()
 function UpdateGridSizeLabel() 
 {
     const p = document.querySelector(".current-size");
-    p.textContent = `Current Grid Size: ${currentGridSize}`
+    p.textContent = `Current Grid Size: ${currentGridSize} x ${currentGridSize}`
 }
