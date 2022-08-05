@@ -26,12 +26,13 @@ function RenderCanvas(numberOfBoxes)
         let box = document.createElement("div");
         box.setAttribute("class", "box");
 
-        let calculateSize = `${100 / numberOfBoxes}%`;
-        box.style.width = calculateSize;
-        box.style.height = calculateSize;
-
+        //We were trying to be clever. Didn't help.
+        //Let's leave CSS Grid to handle the sizing of Cells!
+        //
+        // let calculateSize = `${100 / numberOfBoxes}%`;
+        // box.style.width = calculateSize;
+        // box.style.height = calculateSize;        
         
-
         //Register event listener.
         box.addEventListener("mouseover", ColourIt);
 
