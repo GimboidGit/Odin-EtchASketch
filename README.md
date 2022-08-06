@@ -26,7 +26,8 @@ Set the grid size to something denser if desired and enjoy.
 Add Confirmation of "Shake" (reset):
 - To aid in preventing any accidental resets.
 
-Two additional colour modes:
+Three additional colour modes:
+- Simple, single colour picker for RGB range
 - Random RGB colouring of squares.
 - Gradual black colouration (Gradient).
 
