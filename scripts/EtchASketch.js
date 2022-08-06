@@ -82,9 +82,14 @@ function Clear()
     container.textContent = "";
 }
 
-//Driven by button clickm this will clear the canvas, then render it again.
+//Driven by button click this will clear the canvas, then render it again.
 function ResetCanvas()
 {
+    let answer = confirm("Are you sure you want to reset the canvas?");
+
+    if (answer === false)
+        return;
+
     Clear();
     RenderCanvas(currentGridSize);
 }
