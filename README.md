@@ -24,7 +24,9 @@ Set the grid size to something denser if desired and enjoy.
 
 ## Planned Updates
 ~~Add Confirmation of "Shake" (reset):~~
-~~- To aid in preventing any accidental resets.~~
+- ~~To aid in preventing any accidental resets.~~
+
+<br>
 
 Add animation to reset button:
 - Idea is that the Etch-A-Sketch will "move" left-to-right a few times, then the canvas will be cleared.
@@ -46,7 +48,7 @@ Ability to Save drawings:
 
 ## Version History
 
-- Version 2 - 06/08/2022
--- Added reset confirmation prompt.
+* Version 2 - 06/08/2022
+    * Added reset confirmation prompt.
 
 - Version 1 - 06/08/2022 - INITIAL Release
