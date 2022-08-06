@@ -26,6 +26,9 @@ Set the grid size to something denser if desired and enjoy.
 Add Confirmation of "Shake" (reset):
 - To aid in preventing any accidental resets.
 
+Add animation to reset button:
+- Idea is that the Etch-A-Sketch will "move" left-to-right a few times, then the canvas will be cleared.
+
 Three additional colour modes:
 - Simple, single colour picker for RGB range
 - Random RGB colouring of squares.
