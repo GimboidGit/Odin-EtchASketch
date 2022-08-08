@@ -26,6 +26,9 @@ Set the grid size to something denser if desired and enjoy.
 ~~Add Confirmation of "Shake" (reset):~~
 - ~~To aid in preventing any accidental resets.~~
 
+~~Ability to Save drawings:~~
+- ~~User friendly version that will "snapshot" the webpage.~~
+
 <br>
 
 Add animation to reset button:
@@ -39,8 +42,7 @@ Three additional colour modes:
 Keyboard Control Scheme:
 - Emulate the acutal Etch-A-Sketch use of two "wheels"; one for verical movement, one for horizontal movement.
 
-Ability to Save drawings:
-- User friendly version that will "snapshot" the webpage.
+
 
 
 <br>
@@ -48,7 +50,10 @@ Ability to Save drawings:
 
 ## Version History
 
+* Version 3 - 08/08/2022
+    * Implemented "Save Image" feature.
+
 * Version 2 - 06/08/2022
     * Added reset confirmation prompt.
 
-- Version 1 - 06/08/2022 - INITIAL Release
+* Version 1 - 06/08/2022 - INITIAL Release
