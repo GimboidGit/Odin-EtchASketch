@@ -5,6 +5,11 @@ customSizeButton.addEventListener("click", SetGridSize);
 const resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", ResetCanvas);
 
+const colourList = document.getElementById("colour-mode");
+colourList.addEventListener("change", SetColourMode);
+
+
+let colourMode = 0;
 
 let currentGridSize = 16;
 UpdateGridSizeLabel();
@@ -44,10 +49,29 @@ function RenderCanvas(numberOfBoxes)
     container.style.gridTemplateColumns = `repeat(${numberOfBoxes}, 1fr)`;
 }
 
+
+function SetColourMode(event)
+{
+    colourMode = event.target.selectedIndex;
+}
+
 //This will colour the box when hovering over.
 function ColourIt(event)
 {
-    event.target.style.backgroundColor = "black";
+    switch(colourMode)
+    {
+        case 0:
+            event.target.style.backgroundColor = "black";
+            break;
+
+        case 1: //BlackGradient.
+            event.target.style.backgroundColor = "blue";
+            break;
+
+        case 2: //Random RGB.
+            event.target.style.backgroundColor = "pink";
+            break;
+    }
 }
 
 
