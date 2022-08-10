@@ -69,9 +69,25 @@ function ColourIt(event)
             break;
 
         case 2: //Random RGB.
-            event.target.style.backgroundColor = "pink";
+            event.target.style.backgroundColor = CreateRandomRGB();
             break;
     }
+}
+
+function CreateRandomRGB()
+{
+    let red = GetRandomRGBValue();
+    let green = GetRandomRGBValue();
+    let blue = GetRandomRGBValue();
+
+    return `rgb(${red}%, ${green}%, ${blue}%)`;
+}
+
+function GetRandomRGBValue()
+{
+    //Use: Percentages. Not 0 to 255.
+    //Number between 0 and 100.
+    return Math.floor(Math.random() * 101);
 }
 
 
