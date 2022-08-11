@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+* {
+    font-family: 'Kalam', cursive;
+}
+
+
 body {
     background-color: #c40b0b; /*#e30b0b*/
 }
