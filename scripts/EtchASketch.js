@@ -11,6 +11,9 @@ colourList.addEventListener("change", SetColourMode);
 
 let colourMode = 0;
 
+//Greyscale Colour Mode.
+let currGreyscale = 240;
+
 let currentGridSize = 16;
 UpdateGridSizeLabel();
 
@@ -64,14 +67,27 @@ function ColourIt(event)
             event.target.style.backgroundColor = "black";
             break;
 
-        case 1: //BlackGradient.
-            event.target.style.backgroundColor = "blue";
+        case 1: //Greyscale.
+            event.target.style.backgroundColor = CreateGreyscaleRGB();
             break;
 
         case 2: //Random RGB.
             event.target.style.backgroundColor = CreateRandomRGB();
             break;
     }
+}
+
+function CreateGreyscaleRGB()
+{
+    //Wrap back round to Light Grey.
+    if (currGreyscale - 8 < 40)
+        currGreyscale = 240;
+
+    let rgbText = `rgb(${currGreyscale}, ${currGreyscale}, ${currGreyscale})`;
+
+    currGreyscale -= 8;
+
+    return rgbText;
 }
 
 function CreateRandomRGB()
@@ -83,10 +99,9 @@ function CreateRandomRGB()
     return `rgb(${red}%, ${green}%, ${blue}%)`;
 }
 
+//Number between 0 and 100. Use: Percentages.
 function GetRandomRGBValue()
 {
-    //Use: Percentages. Not 0 to 255.
-    //Number between 0 and 100.
     return Math.floor(Math.random() * 101);
 }
 
