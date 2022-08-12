@@ -11,12 +11,8 @@
     <h1>Etch-A-Sketch</h1>
     <div class="grid-container plain-border">
     </div>
-    <div class="controls">
-        <button id="setGrid">Set Grid Size</button>
-        <button id="reset">Shake!</button>
-        <button id="download">Save Image</button>
-    </div>
     <div class="colours">
+        <p class="current-size"></p>
         <label for="colour-mode">Colour Mode:</label>
         <select id="colour-mode">
             <option value="0">Original (Black)</option>
@@ -24,7 +20,11 @@
             <option value="2">Random Per Square</option>
         </select>
     </div>
-    <p class="current-size"></p>
+    <div class="controls">
+        <button id="setGrid">Set Grid Size</button>
+        <button id="reset">Shake!</button>
+        <button id="download">Save Image</button>
+    </div>
     <script src="./scripts/EtchASketch.js"></script>
     <script src="./scripts/html2canvas.js"></script>
     <script type="module" src="./scripts/Downloader.js"></script>
